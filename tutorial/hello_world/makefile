@@ -1,5 +1,11 @@
-hello_world.out : hello_world.c
-	gcc hello_world.c -o hello_world.out
+objects = hello_world.o
 
+hello_world : $(objects) 
+	gcc -o hello_world.out $(objects)
+
+$(objects) :
+
+.PHONY : clean
 clean :
-	rm hello_world.out
+	rm hello_world.out $(objects)
+
