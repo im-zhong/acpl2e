@@ -14,11 +14,20 @@ int main(int argc, char* argv[])
     return 0;
 }
 
+// int power(int base, int n)
+// {
+//    int p = 1;
+//    for (int i = 1; i <= n; ++i)
+//        p *= base;
+//    return p;
+// }
+// 
+
+// In C, all function arguments are passed 'by value'
 int power(int base, int n)
 {
-   int p = 1;
-   for (int i = 1; i <= n; ++i)
-       p *= base;
-   return p;
+    for (int p = 1; n > 0; --n)
+        p *= base;
+    return p;
 }
 
