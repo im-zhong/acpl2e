@@ -3,10 +3,8 @@
 # otherwise it will always be compiled
 all : word_length.out character_frequency.out
 
-debug = 
-CC = gcc $(debug)
-
-
+debug : CFLAGS = -g
+debug : all 
 
 word_length.out : c_string.o graphics.o histogram.o word_length.o 
 	$(CC) -o word_length.out c_string.o graphics.o histogram.o word_length.o
@@ -27,7 +25,6 @@ graphics.o histogram.o : graphics.h
 
 histogram.o word_length.o character_frequency.o : histogram.h
 
-
 # cc usually link to gcc
 # -c means do not link
 # -o means generate the object file
@@ -39,10 +36,7 @@ histogram.o word_length.o character_frequency.o : histogram.h
 # make will only auto-generate the relative source file,
 # and do not care about the prerequeists
 
-
-debug : all
-	debug := -g
-
 .PHONY : clean
 clean :
 	rm *.o *.out
+
