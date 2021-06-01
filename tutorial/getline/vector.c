@@ -5,6 +5,7 @@
 #include "vector.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 void realloc_vector(vector_t v)
 {
@@ -40,7 +41,14 @@ void push_back(vector_t v, char c)
 
 char pop_back(vector_t v)
 {
-    return '\0';
+    if (v == NULL)
+        return EOF;
+    if (v->data == NULL && v->size == 0)
+        return EOF;
+
+    char c = (v->data)[v->size - 1];
+    --(v->size);
+    return c;
 }
 
 void free_vector(vector_t v)
@@ -55,4 +63,36 @@ void free_vector(vector_t v)
 void clear_vector(vector_t v)
 {
     v->size = 0;
+}
+
+char get_back(vector_t v)
+{ 
+    if (v == NULL)
+        return EOF;
+    if (v->data == NULL && v->size == 0)
+        return EOF;
+
+    return (v->data)[v->size - 1];
+}
+
+char get_front(vector_t v)
+{
+    if (v == NULL)
+        return EOF;
+    if (v->data == NULL && v->size == 0)
+        return EOF;
+
+    return (v->data)[0];
+}
+
+vector_t copy_vector(vector_t v)
+{
+    if (v == NULL)    
+        return NULL;
+
+    vector_t vector = make_vector();
+    vector->data = (char*)malloc(v->capacity);
+    strncpy(vector->data, v->data, v->size);
+    vector->size = v->size;
+    vector->capacity = v->capacity;
 }

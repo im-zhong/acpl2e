@@ -1,4 +1,4 @@
-all: simple_get_longest_line.out get_longest_line.out longer_than_80.out
+all: simple_get_longest_line.out get_longest_line.out longer_than_80.out trail.out
 
 debug: CFLAGS = -g
 debug: all
@@ -14,6 +14,11 @@ get_longest_line.o:
 longer_than_80.out: longer_than_80.o vector.o
 	$(CC) $(CFLAGS) -o $@ $^
 longer_than_80.o vector.o: vector.h
+
+trail.out: trail.o vector.o
+	$(CC) $(CFLAGS) -o $@ $^
+trail.o: vector.h
+
 
 .PHONY: clean
 clean:
