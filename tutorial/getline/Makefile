@@ -1,5 +1,5 @@
 all: simple_get_longest_line.out get_longest_line.out longer_than_80.out \
-     trail.out reverse.out
+     trail.out reverse.out detab.out
 
 debug: CFLAGS = -g
 debug: all
@@ -23,6 +23,10 @@ trail.o: vector.h
 reverse.out: reverse.o vector.o
 	$(CC) $(CFLAGS) -o $@ $^
 reverse.o: vector.h
+
+detab.out: detab.o vector.o
+	$(CC) $(CFLAGS) -o $@ $^
+detab.o: vector.h
 
 .PHONY: clean
 clean:
