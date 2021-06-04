@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
     printf("---\n");
 
     // [signed] short [int]
-    printf("short bit: %d\n", sizeof(short));
+    printf("short bit: %d\n", sizeof(short) * CHAR_BIT);
     printf("short min: %d\n", SHRT_MIN);
     printf("short max: %d\n", SHRT_MAX);
     // unsigned short [int]
@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     printf("---\n");
 
     // [signed] int
-    printf("int bit: %d\n", sizeof(int));
+    printf("int bit: %d\n", sizeof(int) * CHAR_BIT);
     printf("int min: %d\n", INT_MIN);
     printf("int max: %d\n", INT_MAX);
     // unsigned int
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
     printf("---\n");
     
     // [signed] long [int]
-    printf("long bit: %d\n", sizeof(long));
+    printf("long bit: %d\n", sizeof(long) * CHAR_BIT);
     printf("long min: %ld\n", LONG_MIN);
     printf("long max: %ld\n", LONG_MAX);
     // unsigned long [int]
@@ -47,7 +47,7 @@ int main(int argc, char* argv[])
     // C99
     // new type: bool, long long
     // [signed] long long [int]
-    printf("long long bit: %d\n", sizeof(long long));
+    printf("long long bit: %d\n", sizeof(long long) * CHAR_BIT);
     printf("long long min: %lld\n", LLONG_MIN);
     printf("long long max: %lld\n", LLONG_MAX);
     // unsigned long long [int]
@@ -56,19 +56,19 @@ int main(int argc, char* argv[])
 
     // floating-point type
     // float
-    printf("float bit: %d\n", sizeof(float));
+    printf("float bit: %d\n", sizeof(float) * CHAR_BIT);
     printf("float min: %e\n", FLT_MIN);
     printf("float max: %e\n", FLT_MAX);
     printf("---\n");
 
     // double
-    printf("double bit: %d\n", sizeof(double));
+    printf("double bit: %d\n", sizeof(double) * CHAR_BIT);
     printf("double min: %e\n", DBL_MIN);
     printf("double max: %e\n", DBL_MAX);
     printf("---\n");
 
     // long double
-    printf("long double bit: %d\n", sizeof(long double));
+    printf("long double bit: %d\n", sizeof(long double) * CHAR_BIT);
     printf("long double min: %Le\n", LDBL_MIN);
     printf("long double max: %Le\n", LDBL_MAX);
 
