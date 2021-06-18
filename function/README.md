@@ -1,4 +1,4 @@
-# Chapter 4 - FUnctions and Program Structure
+# Chapter 4 - Functions and Program Structure
 where to find C standard library implmentation? GCC? Linux source code?
 
 4.3 External Variables
