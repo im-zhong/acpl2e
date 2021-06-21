@@ -31,6 +31,16 @@ int to_day(int year, int month, int day)
     return day_of_year;
 }
 
+int to_day_pointer_version(int year, int month, int day)
+{
+    int* pday = is_leap(year) ? day_of_month[0] : day_of_month[1];
+    int day_of_year = 0;
+    for (int m = 0; m < month - 1; ++m)
+        day_of_year += *(pday + m);
+    day_of_year += day;
+    return day_of_year;
+}
+
 int main(int argc, char* argv[])
 {
     if (argc < 4)
@@ -44,5 +54,6 @@ int main(int argc, char* argv[])
     int day = atoi(argv[3]);
 
     printf("%d\n", to_day(year, month, day));
+    printf("%d\n", to_day_pointer_version(year, month, day));
     exit(EXIT_SUCCESS);
 }
