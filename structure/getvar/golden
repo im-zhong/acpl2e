@@ -1,0 +1,32 @@
+C
+DEFAULT_PREFIX_LENGTH, Don
+EOF, EXIT_SUCCESS, Exercise
+Make
+NULL
+Self, Structures
+T
+Write
+Z0, Z_
+_, _LIST_H_, _TOKEN_H_, _TREE_H_, _a
+a, add, allocate, alphabetical, and, are, argc, argv, at, atoi
+be, binary_search, bool, but
+c, can, characters, command, comments, count, ctype
+define, different
+each, endif, enough, exit
+find, first, free, free_list, free_tree, from
+get, get_token, getchar, group
+h, head, high
+identical, ifndef, in, include, insert_after, insert_list, insert_tree, is_keyword, isalnum, isalpha, isdigit, ishead, istoken
+keywords
+left, len, line, list, list_node_t, list_t, low
+main, make_list, make_node, make_tree, malloc, memory, middle
+n, names, next, node
+of, order, ordered_keywords
+pT, parameter, prefix, prefix_length, print_list, print_tree, printf, prints, program
+r, reads, realloc, referential, right
+s, set, size, size_t, somewhere, src, ssize_t, stdbool, stddef, stdin, stdio, stdlib, strcmp, strdup, string, strings, strlen, strncmp, strndup
+t, tail, that, the, thereafter, token, token_size, tree, tree_node_t, tree_t
+until
+value, variables
+within, word, words, work
+zA, zhangzhong
